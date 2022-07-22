@@ -34,14 +34,14 @@ export default defineComponent({
       console.log(n, o);
     });
     // 钩子   没有 create
-    function myAjax() {
-      axios.get("xxx").then();
-    }
+    // function myAjax() {
+    //   axios.get("xxx").then();
+    // }
     // myAjax();
     let pp = ref(null)
     onMounted(() => {
       // console.log(pp.value);
-      (pp.value  as HTMLParagraphElement).style.background = "red"
+      (pp.value as unknown  as HTMLParagraphElement).style.background = "red"
       
     });
     return {
